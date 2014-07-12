@@ -59,6 +59,11 @@ Default value: `''`
 
 seajs module define name
 
+#### options.global
+Type: `Array`
+Default value: `[]`
+
+global object list. 
 
 ### Usage Examples
 

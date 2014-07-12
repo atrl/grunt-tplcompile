@@ -20,7 +20,8 @@ module.exports = function(grunt) {
         options: {
             root : 'test/',
             wrap : 'seajs',
-            output : 'default'
+            output : 'default',
+            global : []
         }
       }
     },
