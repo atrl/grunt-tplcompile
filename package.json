@@ -1,0 +1,38 @@
+{
+  "name": "tplcompile",
+  "description": "compile html template to seajs module function",
+  "version": "0.1.0",
+  "homepage": "https://github.com/atrl/node_modules",
+  "author": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/atrl/node_modules.git"
+  },
+  "bugs": {
+    "url": "https://github.com/atrl/node_modules/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/atrl/node_modules/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-nodeunit": "~0.4.1",
+    "grunt": "~0.4.4",
+    "uglify-js" : "*"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.4"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}

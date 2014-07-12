@@ -1,0 +1,25 @@
+<%
+var lib = require('lib');
+%>
+<%if(false){%>
+<div>test condition</div>
+<%}%>
+<ul>
+<%for(var i = 0; i < 5; i++){%>
+<li><%=i%><%=lib.noop()%></li>
+<%}%>
+</ul>
+
+
+<div>test function name and function arguments</div>
+<%
+    function b(c, d){
+        /*scope*/
+        var n = 1;
+        return n + c + d + f;
+    }
+%>
+<%=b()%>
+
+<div>n is undeclared, will change to data.n</div>
+<%=n%>
