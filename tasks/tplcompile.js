@@ -45,12 +45,7 @@ module.exports = function(grunt) {
                 if (!writeFile[dir]) {
                     writeFile[dir] = [];
                 }
-                try{
-                    var source = compile(grunt.file.read(filepath), filepath);
-                }catch(e){
-                    console.warn(filepath, e.stack);
-                    throw(e);
-                }
+                var source = compile(grunt.file.read(filepath), filepath);
                 writeFile[dir].push('"' + path.basename(filepath).split('.')[0] + '":' + source);
             });
         });
