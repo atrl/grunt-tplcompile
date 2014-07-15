@@ -14,8 +14,8 @@ module.exports = function(grunt) {
 
     var wraps = {
         'seajs' : {
-            before : 'define("{name}", function (require, exports, module) {exports = module.exports = ',
-            after : "});"
+            before : 'define("{name}", function (require, exports, module) {\nexports = module.exports = ',
+            after : "\n});"
         },
         'node' : {
             before : 'module.exports = exports = ',
@@ -45,7 +45,10 @@ module.exports = function(grunt) {
                 if (!writeFile[dir]) {
                     writeFile[dir] = [];
                 }
-                var source = compile(grunt.file.read(filepath), filepath);
+                var source = compile(grunt.file.read(filepath), {
+                    filepath : filepath,
+                    global : options.global
+                });
                 writeFile[dir].push('"' + path.basename(filepath).split('.')[0] + '":' + source);
             });
         });
@@ -55,7 +58,7 @@ module.exports = function(grunt) {
             grunt.file.write(
                 dir + '.js', 
                 wrap.before.replace('{name}', dir.replace(/\\/g, '/').replace(options.root, '')) 
-                + "{" + writeFile[dir].join(',') + "}" 
+                + "{\n" + writeFile[dir].join(',') + "\n}" 
                 + wrap.after
             );
         }

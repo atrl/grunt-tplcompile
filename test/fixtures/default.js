@@ -1,4 +1,6 @@
-define("fixtures/default", function (require, exports, module) {exports = module.exports = {"main":function (data) {
+define("node_modules/grunt-tplcompile/test/fixtures/tmpl", function (require, exports, module) {
+exports = module.exports = {
+"main":function (data) {
     var p = "";
     p += "";
     var lib = require("lib");
@@ -25,4 +27,6 @@ define("fixtures/default", function (require, exports, module) {exports = module
     p += data.n;
     p += "";
     return p;
-}}});
+}
+}
+});
