@@ -26,14 +26,12 @@ module.exports = function(grunt) {
     grunt.registerMultiTask('tplcompile', 'manifest file builder', function() {
         // Merge task-specific and/or target-specific options with these defaults.
         var options = this.options({
-            punctuation: '.',
-            separator: ', ',
             root : '',
             wrap : 'seajs',
             output : 'tmpl',
             global : []
         });
-        var wrap = wraps[options.wrap];
+        var wrap = wraps[options.wrap] || options.wrap;
 
         // Iterate over all src-dest file pairs.
         var writeFile = {};
