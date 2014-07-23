@@ -1,7 +1,7 @@
 {
-  "name": "tplcompile",
-  "description": "compile html template to seajs module function",
-  "version": "0.1.0",
+  "name": "grunt-compiletpl",
+  "description": "compile html template to function",
+  "version": "1.1.1",
   "homepage": "https://github.com/atrl/node_modules",
   "author": {},
   "repository": {
@@ -24,15 +24,16 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-nodeunit": "~0.4.1",
     "grunt": "~0.4.4",
-    "uglify-js" : "*"
+    "uglify-js": "*"
   },
   "peerDependencies": {
     "grunt": "~0.4.4"
   },
   "keywords": [
-    "gruntplugin"
+    "compile",
+    "template",
+    "grunt"
   ]
 }
